@@ -1,7 +1,5 @@
 class Key{
-    constructor(protected signature: number){
-        signature = Math.random();
-    }
+    private signature:number =  Math.random()
 
     getSignature():number {
         return this.signature
@@ -46,7 +44,7 @@ class MyHouse extends House{
 }
 
 
-const key = new Key(3);
+const key = new Key();
 
 const house = new MyHouse(key);
 const person = new Person(key);
